@@ -1,0 +1,79 @@
+import time, random
+chances=10
+l=['Hobbies', 'Video Games', 'Board Games']
+print ("Welcome to Hang Man! Choose your category:")
+time.sleep(3)
+print (l)
+c=input()
+if c=='Hobbies':
+	cl=['cricket', 'reading', 'cooking', 'singing', 'coding']
+	a=random.choice(cl)
+	b=len(a)
+	cg=list(a)
+	bs=['_']*b
+	print(bs)
+	while True:
+		print ("Enter a letter to guess the word!")
+		g=input()
+		if g in a:
+			for n in range (0,b,1):
+				if g==a[n]:
+					bs[n]=g
+		print (bs)
+		if g not in a:
+			print ("Guess again!")
+			chances=chances-1
+			if chances==0:
+				print ("Game Over. Sorry! Maybe next time?")
+				break
+		if cg==bs:
+			print ("Congratualtions! You won!")
+			break
+if c=='Video Games':
+	cl=['super mario bros', 'donkey kong country', 'minecraft', 'roblox', 'pac man']
+	a=random.choice(cl)
+	b=len(a)
+	cg=list(a)
+	bs=['_']*b
+	print(bs)
+	while True:
+		print ("Enter a letter to guess the word!")
+		g=input()
+		if g in a:
+			for n in range (0,b,1):
+				if g==a[n]:
+					bs[n]=g
+		print (bs)
+		if g not in a:
+			print ("Guess again!")
+			chances=chances-1
+			if chances==0:
+				print ("Game Over. Sorry! Maybe next time?")
+				break
+		if cg==bs:
+			print ("Congratualtions! You won!")
+			break
+if c=='Board Games':
+	cl=['monopoly', 'snakes and ladders', 'ludo', 'big business', 'chess']
+	a=random.choice(cl)
+	b=len(a)
+	cg=list(a)
+	bs=['_']*b
+	print(bs)
+	while True:
+		print ("Enter a letter to guess the word!")
+		g=input()
+		if g in a:
+			for n in range (0,b,1):
+				if g==a[n]:
+					bs[n]=g
+		print (bs)
+		if g not in a:
+			print ("Guess again!")
+			chances=chances-1
+			if chances==0:
+				print ("Game Over. Sorry! Maybe next time?")
+				break
+		if cg==bs:
+			print ("Congratualtions! You won!")
+			break
